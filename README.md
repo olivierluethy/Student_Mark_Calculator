@@ -1,11 +1,36 @@
 # Student Mark Calculator
-This Python code calculates and prints out a student's mark based on the number of points they have achieved out of the maximum number of points that can be achieved.
 
-## How the program works
-The code starts by prompting the user to enter the number of points they have achieved, which is stored in the variable achievedPoints. It then prompts the user to enter the maximum number of points that can be achieved, which is stored in the variable maxPoints.
+A tiny command-line Python script that converts a test score into a Swiss-style
+grade (1–6). Enter the points you achieved and the maximum points, and it prints
+your mark.
 
-The code then calculates the student's mark using the formula yourMark = ((achievedPoints * 5) / maxPoints) + 1. This formula scales the student's achieved points to a 5-point scale (where the maximum number of points corresponds to a mark of 5) and adds 1 to the result to get the student's mark.
+## How it works
 
-They next line of code rounds the student's mark to 2 decimal places using the round function
+The grade is calculated with the standard linear formula:
 
-Finally, the code prints out the student's mark using the print function.
+```
+mark = (achievedPoints * 5) / maxPoints + 1
+```
+
+This scales your points onto the 1–6 scale, where the maximum score maps to a 6,
+and rounds the result to two decimal places.
+
+## Tech
+
+- Python 3 (standard library only)
+
+## Run
+
+```bash
+python mark_calculator.py
+```
+
+You'll be prompted for the points you achieved and the maximum points, and the
+resulting mark is printed.
+
+## Files
+
+```
+mark_calculator.py                    # the script
+formula_for_calculation_of_mark.png   # the grading formula, illustrated
+```
